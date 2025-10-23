@@ -1,0 +1,21 @@
+Database 
+
+
+
+CREATE TABLE `shamol`.`user_info` (`ID` INT(8) NOT NULL AUTO_INCREMENT , `NID` INT(16) NOT NULL , `Name` VARCHAR(20) NOT NULL , `Fathers_Name` VARCHAR(20) NOT NULL , `Address` MEDIUMTEXT NOT NULL , `Passport_Number` VARCHAR(10) NULL , `DOB` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , INDEX `shamol_ID_Index` (`ID`), UNIQUE `shamol_Unique_Passport` (`Passport_Number`)) ENGINE = InnoDB;
+
+
+
+ALTER TABLE `user_info` ADD `Mothers_Name` VARCHAR(20) NOT NULL AFTER `Fathers_Name`;
+
+
+
+INSERT INTO `user_info` (`ID`, `NID`, `Name`, `Fathers_Name`, `Mothers_Name`, `Address`, `Passport_Number`, `DOB`) VALUES ('1', '916472407', 'Shamol', 'A. K', 'M.S.B', 'Jamalpur Sadar, Jamalpur', 'abc123456', '2021-09-16');
+
+ALTER TABLE `log_in` CHANGE `ID` `ID` INT(11) NOT NULL AUTO_INCREMENT;
+
+
+You are about to DESTROY a complete database! Do you really want to execute "DROP DATABASE `mas`;"?
+
+
+INSERT INTO `persons` (`PersonID`, `LastName`, `FirstName`, `Address`, `City`) VALUES ('123', 'Shamol', 'Mohammad', 'Jamalpur', 'Jamalpur')
